@@ -1,39 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
 import React, { useState } from "react";
-import Lottie from "react-lottie";
+import { LottieItem } from "./LottieItem";
 import angry from "./animationData/angry.json";
 import smile from "./animationData/smile.json";
 import jump from "./animationData/jump.json";
 import BackgroundRed from "./images/BackgroundRed.png";
 import BackgroundAngry from "./images/BackgroundAngry.jpg";
-
-const angryItem = {
-  loop: false,
-  autoplay: true,
-  animationData: angry,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-const jumpItem = {
-  loop: true,
-  autoplay: true,
-  animationData: jump,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-const smileItem = {
-  loop: false,
-  autoplay: true,
-  animationData: smile,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 
 export const Animation = () => {
   const [isJump, setIsJump] = useState(true);
@@ -61,9 +34,9 @@ export const Animation = () => {
         <div css={container}>
           <div css={serif}>Qiitanに話しかけよう！</div>
           <div css={stage}>
-            {isJump && <Lottie options={jumpItem} height={375} width={360} />}
-            {isAngry && <Lottie options={angryItem} height={375} width={360} />}
-            {isSmile && <Lottie options={smileItem} height={375} width={360} />}
+            {isJump && <LottieItem animation={jump} loop={true} />}
+            {isSmile && <LottieItem animation={smile} loop={false} />}
+            {isAngry && <LottieItem animation={angry} loop={false} />}
           </div>
 
           <button onClick={handleClickJump} css={button}>
