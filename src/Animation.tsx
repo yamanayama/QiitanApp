@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import React, { useState } from "react";
+import { VFC, useState } from "react";
 import { LottieItem } from "./LottieItem";
 import angry from "./animationData/angry.json";
 import smile from "./animationData/smile.json";
@@ -8,49 +8,36 @@ import jump from "./animationData/jump.json";
 import BackgroundRed from "./images/BackgroundRed.png";
 import BackgroundAngry from "./images/BackgroundAngry.jpg";
 
-export const Animation = () => {
-  const [isJump, setIsJump] = useState(true);
-  const [isAngry, setIsAngry] = useState(false);
-  const [isSmile, setIsSmile] = useState(false);
+type Action = "jump" | "smile" | "angry";
 
-  const handleClickJump = () => {
-    setIsJump(true);
-    setIsAngry(false);
-    setIsSmile(false);
-  };
-  const handleClickAngry = () => {
-    setIsAngry(true);
-    setIsJump(false);
-    setIsSmile(false);
-  };
-  const handleClickSmile = () => {
-    setIsSmile(true);
-    setIsAngry(false);
-    setIsJump(false);
-  };
+export const Animation: VFC = () => {
+  const [action, setAction] = useState<Action>("jump");
+
+  const isJump = action === "jump";
+  const isSmile = action === "smile";
+  const isAngry = action === "angry";
+
   return (
-    <>
-      <div css={[backgroundImage(isAngry)]}>
-        <div css={container}>
-          <div css={serif}>Qiitanに話しかけよう！</div>
-          <div css={stage}>
-            {isJump && <LottieItem animation={jump} loop={true} />}
-            {isSmile && <LottieItem animation={smile} loop={false} />}
-            {isAngry && <LottieItem animation={angry} loop={false} />}
-          </div>
-
-          <button onClick={handleClickJump} css={button}>
-            ジャンプして！
-          </button>
-          <button onClick={handleClickSmile} css={button}>
-            笑って！
-          </button>
-          <button onClick={handleClickAngry} css={button}>
-            怒った…？
-          </button>
+    <div css={[backgroundImage(action === "angry")]}>
+      <div css={container}>
+        <div css={serif}>Qiitanに話しかけよう！</div>
+        <div css={stage}>
+          {isJump && <LottieItem animation={jump} loop={true} />}
+          {isSmile && <LottieItem animation={smile} loop={false} />}
+          {isAngry && <LottieItem animation={angry} loop={false} />}
         </div>
+
+        <button onClick={() => setAction("jump")} css={button}>
+          Qiitan、ジャンプして！
+        </button>
+        <button onClick={() => setAction("smile")} css={button}>
+          Qiitan、笑って！
+        </button>
+        <button onClick={() => setAction("angry")} css={button}>
+          Qiitan、怒った…？
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
