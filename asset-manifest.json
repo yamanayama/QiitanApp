@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/QiitanApp/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/QiitanApp/static/js/main.87d0ba44.chunk.js",
-    "main.js.map": "/QiitanApp/static/js/main.87d0ba44.chunk.js.map",
-    "runtime-main.js": "/QiitanApp/static/js/runtime-main.56413a7c.js",
-    "runtime-main.js.map": "/QiitanApp/static/js/runtime-main.56413a7c.js.map",
-    "static/js/2.cb57e4ca.chunk.js": "/QiitanApp/static/js/2.cb57e4ca.chunk.js",
-    "static/js/2.cb57e4ca.chunk.js.map": "/QiitanApp/static/js/2.cb57e4ca.chunk.js.map",
-    "static/js/3.ba0c1823.chunk.js": "/QiitanApp/static/js/3.ba0c1823.chunk.js",
-    "static/js/3.ba0c1823.chunk.js.map": "/QiitanApp/static/js/3.ba0c1823.chunk.js.map",
-    "index.html": "/QiitanApp/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/QiitanApp/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.cb57e4ca.chunk.js.LICENSE.txt": "/QiitanApp/static/js/2.cb57e4ca.chunk.js.LICENSE.txt",
-    "static/media/BackgroundAngry.d0c342da.jpg": "/QiitanApp/static/media/BackgroundAngry.d0c342da.jpg",
-    "static/media/BackgroundRed.97797847.png": "/QiitanApp/static/media/BackgroundRed.97797847.png"
+    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/static/js/main.31735061.chunk.js",
+    "main.js.map": "/static/js/main.31735061.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.67744ce2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.67744ce2.js.map",
+    "static/js/2.cb57e4ca.chunk.js": "/static/js/2.cb57e4ca.chunk.js",
+    "static/js/2.cb57e4ca.chunk.js.map": "/static/js/2.cb57e4ca.chunk.js.map",
+    "static/js/3.ba0c1823.chunk.js": "/static/js/3.ba0c1823.chunk.js",
+    "static/js/3.ba0c1823.chunk.js.map": "/static/js/3.ba0c1823.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.cb57e4ca.chunk.js.LICENSE.txt": "/static/js/2.cb57e4ca.chunk.js.LICENSE.txt",
+    "static/media/BackgroundAngry.d0c342da.jpg": "/static/media/BackgroundAngry.d0c342da.jpg",
+    "static/media/BackgroundRed.97797847.png": "/static/media/BackgroundRed.97797847.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.56413a7c.js",
+    "static/js/runtime-main.67744ce2.js",
     "static/js/2.cb57e4ca.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.87d0ba44.chunk.js"
+    "static/js/main.31735061.chunk.js"
   ]
 }
